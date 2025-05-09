@@ -7,7 +7,7 @@ import PlaceOrder from './pages/placeorder/PlaceOrder'
 import Footer from './components/footer/Footer'
 import Login from './components/login/Login'
 import { StoreContext } from './context/StoreContext'
-import Verify from './pages/Verify/Verify'
+import Verify from "./pages/verify/Verify";
 import MyOrders from './pages/MyOrders/MyOrders'
 
 
