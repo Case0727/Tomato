@@ -66,7 +66,7 @@ import upload_area from './upload_area.png'
 import logo_admin from './logo_admin.png'
 
 
-// export const url = 'http://localhost:4000'
+export const url = 'https://tomato-backend-a0u9.onrender.com'
 
 export const assets = {
     logo,
