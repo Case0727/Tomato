@@ -1,0 +1,64 @@
+.app-content {
+    display: flex;
+    min-height: 100vh;
+    flex-wrap: nowrap;
+}
+
+.app-content > .sidebar {
+    flex-shrink: 0;
+    width: 18%;
+    border-right: 1.5px solid #a9a9a9;
+    transition: all 0.3s ease;
+}
+
+.app-content > .main-content {
+    flex-grow: 1;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Responsive styles for tablets and below */
+@media (max-width: 1024px) {
+    .app-content > .sidebar {
+        width: 20%;
+    }
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+    .app-content {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .app-content > .sidebar {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1.5px solid #a9a9a9;
+        min-height: 50px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background-color: white;
+        z-index: 1000;
+        box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    }
+
+    .app-content > .main-content {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 60px; /* to avoid content hidden behind fixed sidebar */
+    }
+}
+
+/* Additional responsive improvements */
+@media (max-width: 480px) {
+    .app-content > .sidebar {
+        padding: 5px 0;
+    }
+
+    .app-content > .main-content {
+        padding: 5px;
+    }
+}

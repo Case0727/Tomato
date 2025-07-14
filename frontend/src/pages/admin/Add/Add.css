@@ -1,0 +1,133 @@
+.add {
+    max-width: 90%;
+    margin: 50px auto 0 auto;
+    font-size: 16px;
+    background-color: transparent;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+.add form {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.add-img-upload {
+    flex: 1 1 250px;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.add-img-upload img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.add-img-upload input[type="file"] {
+    display: none;
+}
+
+.add-product-name,
+.add-product-description {
+    flex: 2 1 400px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.add-product-name p,
+.add-product-description p,
+.add-category p,
+.add-price p {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: black;
+}
+
+.add-product-name input,
+.add-product-description textarea,
+.add-category select,
+.add-price input {
+    padding: 12px 15px;
+    border: 1.5px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border-color 0.3s ease;
+    font-family: inherit;
+    resize: vertical;
+}
+
+.add-product-name input:focus,
+.add-product-description textarea:focus,
+.add-category select:focus,
+.add-price input:focus {
+    outline: none;
+}
+
+.add-category-price {
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.add-category,
+.add-price {
+    flex: 1 1 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.add-category select,
+.add-price input {
+    max-width: 100%;
+}
+
+.add-btn {
+    width: 140px;
+    border: none;
+    padding: 12px 0;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+    margin-top: 30px;
+}
+
+.add-btn:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+    .add form {
+        flex-direction: column;
+    }
+
+    .add-img-upload,
+    .add-product-name,
+    .add-product-description,
+    .add-category-price {
+        flex: 1 1 100%;
+    }
+
+    .add-category-price {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
