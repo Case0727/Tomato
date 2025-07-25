@@ -10,7 +10,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import './AdminApp.css'
 
 export default function AdminApp() {
-  const url = 'https://tomato-82zz.onrender.com'
+  const url = 'https://tomato-backend-a0u9.onrender.com'
   return (
     <>
       <div>
