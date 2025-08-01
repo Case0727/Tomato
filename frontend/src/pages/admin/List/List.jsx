@@ -55,7 +55,7 @@ export default function List({ url }) {
     return (
         <>
             <div className="list add flex-col">
-                <p>All Food List</p>
+                <p className="list-title">All Food List</p>
                 <div className="list-table">
                     <div className="list-table-format title">
                         <b>Image</b>
@@ -71,10 +71,23 @@ export default function List({ url }) {
                                 <p>{item.name}</p>
                                 <p>{item.category}</p>
                                 <p> ₹ {item.price}</p>
-                                <p
-                                    onClick={() => removeFood(item._id)}
+
+                                {/* Action Button Enable */}
+                                {/* <p onClick={() => removeFood(item._id)}
                                     className={`cursor ${loadingId === item._id ? "disabled" : ""}`}
-                                    style={{ pointerEvents: loadingId === item._id ? "none" : "auto", opacity: loadingId === item._id ? 0.5 : 1 }}
+                                    style={{ pointerEvents: loadingId === item._id ? "none" : "auto", opacity: loadingId === item._id ? 0.5 : 1 }}>
+                                    X
+                                </p> */}
+
+                                {/* Action Button Disable  */}
+                                <p
+                                    onClick={() => {
+                                        if (item.isNew) {
+                                            removeFood(item._id);
+                                        }
+                                    }}
+                                    className={`cursor ${loadingId === item._id || !item.isNew ? "disabled" : ""}`}
+                                    style={{ pointerEvents: loadingId === item._id || !item.isNew ? "none" : "auto", opacity: loadingId === item._id || !item.isNew ? 0.5 : 1 }}
                                 >
                                     X
                                 </p>
